@@ -117,7 +117,7 @@ function handleKeyShortcuts(event /* [TEMPLATE] */) {
 
 /**
  * creates a file and downloads it
- * @param {ArrayBuffer} buf the data in from of an ARrayBuffer
+ * @param {ArrayBuffer} buf the data in from of an ArrayBuffer
  * @param {string} mimeType the mime type
  * @param {string} fileName file name without the extension - extension is derived from mime type
  * @returns {Error | null}
