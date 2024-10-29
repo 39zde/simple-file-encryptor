@@ -6,11 +6,7 @@
  * @returns boolean
  */
 function checkBrowserCompatibility() {
-	if (
-		!ArrayBuffer.prototype.hasOwnProperty("resizable") || 
-		!ArrayBuffer.prototype.hasOwnProperty("transferToFixedLength") || 
-		SubtleCrypto === undefined
-	) {
+	if (!ArrayBuffer.prototype.hasOwnProperty("resizable") || !ArrayBuffer.prototype.hasOwnProperty("transferToFixedLength") || SubtleCrypto === undefined) {
 		return false;
 	}
 	return true;
@@ -236,7 +232,11 @@ async function saveHtmlFile() {
 	return downloadFile(encoder.encode("<!doctype html>\n" + html).buffer, "text/html", "simple-file-compressor");
 }
 
+async function hashData() {}
 
+async function encryptSymmetric() {}
+
+async function decryptSymmetric() {}
 
 /**
  *
