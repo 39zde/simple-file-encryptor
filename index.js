@@ -6,7 +6,11 @@
  * @returns boolean
  */
 function checkBrowserCompatibility() {
-	if (!ArrayBuffer.prototype.hasOwnProperty("resizable") || window.CompressionStream === undefined || !ArrayBuffer.prototype.hasOwnProperty("transferToFixedLength")) {
+	if (
+		!ArrayBuffer.prototype.hasOwnProperty("resizable") || 
+		!ArrayBuffer.prototype.hasOwnProperty("transferToFixedLength") || 
+		SubtleCrypto === undefined
+	) {
 		return false;
 	}
 	return true;
@@ -232,17 +236,7 @@ async function saveHtmlFile() {
 	return downloadFile(encoder.encode("<!doctype html>\n" + html).buffer, "text/html", "simple-file-compressor");
 }
 
-/*
 
-
-
-
-    [TEMPLATE]
-    Space for functions
-
-
-
-*/
 
 /**
  *
