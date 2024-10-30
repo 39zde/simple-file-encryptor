@@ -238,6 +238,10 @@ async function encryptSymmetric() {}
 
 async function decryptSymmetric() {}
 
+async function encryptAsymmetric() {}
+
+async function decryptAsymmetric() {}
+
 /**
  *
  * @param [TEMPLATE]
